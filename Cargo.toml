@@ -1,6 +1,6 @@
 [package]
 name = "etcd-rs"
-version = "0.3.0"
+version = "0.4.0"
 authors = ["ccc <currantxx@gmail.com>"]
 edition = "2018"
 keywords = ["etcd", "future", "async"]
@@ -14,7 +14,7 @@ license = "MIT"
 tonic = { version = "0.3", features = ["tls"] }
 bytes = "0.5"
 prost = "0.6"
-tokio = { version = "0.2", features = ["stream"] }
+tokio = { version = "0.3.4", features = ["stream", "rt"] }
 async-stream = "0.2"
 async-trait = "0.1"
 futures = "0.3"
@@ -22,7 +22,7 @@ thiserror = "1.0"
 http = "0.2"
 
 [dev-dependencies]
-tokio = { version = "0.2", features = ["full"] }
+tokio = { version = "0.3.4", features = ["full"] }
 
 [build-dependencies]
 tonic-build = "0.3"

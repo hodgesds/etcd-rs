@@ -25,7 +25,7 @@ async fn watch(client: &Client) -> Result<()> {
         .delete(DeleteRequest::new(KeyRange::key(key)))
         .await?;
 
-    tokio::time::delay_for(Duration::from_secs(5)).await;
+    tokio::time::sleep(Duration::from_secs(5)).await;
 
     Ok(())
 }
